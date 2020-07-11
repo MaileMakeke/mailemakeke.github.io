@@ -29,6 +29,17 @@
   <link rel="stylesheet" href="css/flaticon.css">
   <link rel="stylesheet" href="css/icomoon.css">
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172471671-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-172471671-1');
+  </script>
+
 </head>
 
 <body class="goto-here">
@@ -383,16 +394,16 @@
   <script src="js/main.js"></script>
 
   <script>
-		const scriptURL = 'https://script.google.com/a/cadenbrown.com/macros/s/AKfycbyruuR12dC0QB-V4FvGk5Urq5Dx9Qwe8ECxD3P2J5-BG4zsUS8/exec'
-		const form = document.forms['submit-to-google-sheet']
+    const scriptURL = 'https://script.google.com/a/cadenbrown.com/macros/s/AKfycbyruuR12dC0QB-V4FvGk5Urq5Dx9Qwe8ECxD3P2J5-BG4zsUS8/exec'
+    const form = document.forms['submit-to-google-sheet']
 
-		form.addEventListener('submit', e => {
-			e.preventDefault()
-			fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-				.then(response => console.log('Success!', response))
-				.catch(error => console.error('Error!', error.message))
-		})
-	</script>
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 
 </body>
 

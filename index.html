@@ -29,6 +29,17 @@
 	<link rel="stylesheet" href="css/flaticon.css">
 	<link rel="stylesheet" href="css/icomoon.css">
 	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-172471671-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'UA-172471671-1');
+	</script>
+
 </head>
 
 <body class="goto-here">
@@ -217,7 +228,8 @@
 				<div class="col-md-6 d-flex align-items-center">
 					<form name="submit-to-google-sheet" class="subscribe-form">
 						<div class="form-group d-flex">
-							<input name="email" type="email" class="form-control" placeholder="Enter email address" required>
+							<input name="email" type="email" class="form-control" placeholder="Enter email address"
+								required>
 							<input name="type" type="hidden" value="newsletter">
 							<input type="submit" value="Subscribe" class="submit px-3">
 						</div>
@@ -329,7 +341,7 @@
 	<script src="js/main.js"></script>
 
 
-	
+
 	<script>
 		const scriptURL = 'https://script.google.com/a/cadenbrown.com/macros/s/AKfycbyruuR12dC0QB-V4FvGk5Urq5Dx9Qwe8ECxD3P2J5-BG4zsUS8/exec'
 		const form = document.forms['submit-to-google-sheet']
