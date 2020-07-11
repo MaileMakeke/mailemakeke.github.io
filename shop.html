@@ -94,8 +94,9 @@
 				<div class="col-md-6 d-flex align-items-center">
 					<form action="#" class="subscribe-form">
 						<div class="form-group d-flex">
-							<input type="text" class="form-control" placeholder="Enter email address">
-							<input type="submit" value="Notify Me" class="submit px-3">
+							<input name="email" type="email" class="form-control" placeholder="Enter email address" required>
+							<input name="type" type="hidden" value="newsletter">
+							<input type="submit" value="Subscribe" class="submit px-3">
 						</div>
 					</form>
 				</div>
@@ -204,6 +205,18 @@
 	<script src="js/bootstrap-datepicker.js"></script>
 	<script src="js/scrollax.min.js"></script>
 	<script src="js/main.js"></script>
+
+	<script>
+		const scriptURL = 'https://script.google.com/a/cadenbrown.com/macros/s/AKfycbyruuR12dC0QB-V4FvGk5Urq5Dx9Qwe8ECxD3P2J5-BG4zsUS8/exec'
+		const form = document.forms['submit-to-google-sheet']
+
+		form.addEventListener('submit', e => {
+			e.preventDefault()
+			fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+				.then(response => console.log('Success!', response))
+				.catch(error => console.error('Error!', error.message))
+		})
+	</script>
 
 </body>
 
